@@ -26,3 +26,22 @@ Les clients ansible doivent-ils obligatoirement faire partie d'un groupe ?
 TP : Commandes ad-hoc
 ---------------------
 
+1) ansible client1 -m file -a "path=/tmp/file.txt state=touch"
+Cette commande n'est pas idempotente.
+
+3) ansible client1 -m copy -a "src=/home/ansible/files/OriginalFile.txt dest=/tmp/test.txt"
+Cette commande est idempotente.
+
+4)ansible client1 -m apt -a "name=sl state=latest update_cache=yes"
+Non, cette commande n'est pas fonctionnelle.
+
+À quoi correspond l’option « -b » ?
+Il exécute des opérations avec become (n'implique pas de demande de mot de passe)
+
+ansible client1 -m apt -a "name=sl state=present update_cache=yes" -b
+Cette commande est idempotente.
+
+aller sur client 1 et lancer la commande sl, cela affiche quoi ?
+Cela affiche un train qui passe.
+
+5)
