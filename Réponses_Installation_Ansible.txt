@@ -1,0 +1,28 @@
+TP : Installer Ansible
+----------------------
+
+Quelle est la version du serveur Ansible ?
+	- La version est 2.12.10
+
+À quoi servent les 4 variables remplacées ?
+	- private_key_file : Option pour les connexions utilisant un certificat ou un fichier clé pour s'authentifier
+	- remote_user : Pour être connecté en tant que utilisateur ansible
+	- deprecation_warnings : Contrôle de l'affichage des avertissements de dépréciation
+	- host_key_checking : Pour éviter la vérification de la clé de l'hôte par les outils sous-jacents qu'Ansible utilise pour se connecter à l'hôte.
+
+
+
+TP : Inventaire 
+---------------
+
+Est-il possible de déclarer dans un groupe ansible à la fois des machines et des groupes ?
+	- Oui, c'est possible. Cela permet de créer des hiérarchies et des structures d'organisation flexibles pour les inventaires.
+
+Les clients ansible doivent-ils obligatoirement faire partie d'un groupe ?
+	- Non, ce n'est pas obligé. Il est possible d'exécuter des tâches Ansible directement sur des hôtes individuels sans les placer dans des groupes.
+
+
+
+TP : Commandes ad-hoc
+---------------------
+
